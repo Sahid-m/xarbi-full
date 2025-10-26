@@ -14,6 +14,9 @@ Xarbi is an AI SaaS platform that enables developers to monetize their APIs usin
 
 ## 🏗️ Architecture
 
+<img width="1344" height="764" alt="image" src="https://github.com/user-attachments/assets/427b6920-d795-4318-9363-f57617558942" />
+
+
 Xarbi uses a three-layer architecture:
 
 1. **x402 Client Layer**: Handles client requests and x402 payment requirements
