@@ -16,7 +16,6 @@ Xarbi is an AI SaaS platform that enables developers to monetize their APIs usin
 
 <img width="1344" height="764" alt="image" src="https://github.com/user-attachments/assets/427b6920-d795-4318-9363-f57617558942" />
 
-
 Xarbi uses a three-layer architecture:
 
 1. **x402 Client Layer**: Handles client requests and x402 payment requirements
@@ -98,38 +97,22 @@ PAYMENT_AMOUNT=
 
 ```javascript
 // Example code to be added
+npm i arb-x402
 ```
 
 ### Protecting an Endpoint
 
 ```javascript
 // Example code to be added
+await x402Middleware({
+  merchantId: merchantID,
+});
 ```
 
 ### Custom Payment Configuration
 
 ```javascript
-// Example code to be added
-```
-
-## 🧪 Testing
-
-```bash
-# Run tests
-npm test
-
-# Run with coverage
-npm run test:coverage
-```
-
-## 📦 Deployment
-
-```bash
-# Build for production
-npm run build
-
-# Start production server
-npm start
+You can configure more on dashboard
 ```
 
 ## 🤝 Contributing
@@ -155,7 +138,7 @@ This project is licensed under the [LICENSE TYPE] - see the LICENSE file for det
 
 ## 💬 Support
 
-For support, email support@xarbi.io or join our Discord community.
+For support, email sahidmunjavar.s@gmail.com.
 
 ## 🙏 Acknowledgments
 

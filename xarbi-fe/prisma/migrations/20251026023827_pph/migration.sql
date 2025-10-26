@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Project" ADD COLUMN     "pricePerHit" DOUBLE PRECISION NOT NULL DEFAULT 0.0001;

@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider      = "prisma-client"
+  output        = "../src/generated"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  name      String?
+  clerkId   String    @unique
+  projects  Project[]
+  wallet    Wallet?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  projectId   String   @unique // external identifier if needed
+  name        String
+  description String?
+  user        User     @relation(fields: [userId], references: [id])
+  merchant_id String   @unique
+  userId      Int
+  pricePerHit Float    @default(0.0001)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Wallet {
+  id         Int      @id @default(autoincrement())
+  publicKey  String
+  privateKey String
+  user       User     @relation(fields: [userId], references: [id])
+  userId     Int      @unique // one-to-one relationship
+  clerkId    String   @unique
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
