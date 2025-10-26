@@ -66,7 +66,7 @@ login using frontend
 
 ```bash
 await x402Middleware({
-    merchantId: "332616e7-58d6-4718-885f-246cb7184291",
+    merchantId: merchant_id,
   })
 ```
 
