@@ -46,7 +46,7 @@ git clone https://github.com/Sahid-m/xarbi-full.git
 # Navigate to frontend project directory
 cd xarbi-fe
 1. fill in env variables from .env.example
-2. run `npx prisma generate`
+2. run `npx prisma migrate`
 3. run `npm run dev`
 
 ```
