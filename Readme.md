@@ -43,52 +43,31 @@ Xarbi uses a three-layer architecture:
 ```bash
 # Clone the repository
 git clone https://github.com/Sahid-m/xarbi-full.git
-# Navigate to project directory
-cd xarbi
+# Navigate to frontend project directory
+cd xarbi-fe
+1. fill in env variables from .env.example
+2. run `npx prisma generate`
+3. run `npm run dev`
 
-# Install dependencies
-npm install
 ```
 
-## ⚙️ Configuration
-
-Create a `.env` file in the root directory:
-
-```env
-# API Configuration
-PORT=3000
-API_BASE_URL=
-
-# Blockchain Configuration
-ARBITRUM_SEPOLIA_RPC=
-PRIVATE_KEY=
-CONTRACT_ADDRESS=
-
-# x402 Configuration
-PAYMENT_REQUIRED_HEADER=
-PAYMENT_AMOUNT=
-
-# Additional configuration
-```
 
 ## 🚀 Getting Started
 
-### Step 1: [To be filled]
+### Step 1: Signup from frontend
 
 ```bash
-# Commands and instructions
+login using frontend
 ```
 
-### Step 2: [To be filled]
+### Step 2: create a project and follow user flow
+
+### Step 3: use this in your api code 
 
 ```bash
-# Commands and instructions
-```
-
-### Step 3: [To be filled]
-
-```bash
-# Commands and instructions
+await x402Middleware({
+    merchantId: "332616e7-58d6-4718-885f-246cb7184291",
+  })
 ```
 
 ## 📖 Usage
